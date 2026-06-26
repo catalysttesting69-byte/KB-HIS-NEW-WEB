@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Zanzibar Safari | Paradise Awaits</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="pictures/zanzibarSafarilogo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Prata&family=Caveat&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#e0e7ff', // Soft indigo for accents
+                            DEFAULT: '#1e1b4b', // Deep elegant navy
+                            dark: '#0f172a', // Slate dark
+                            accent: '#d4af37', // Luxurious modern gold
+                            sand: '#faf9f6', // Warm off-white
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Prata', 'serif'],
+                        handwriting: ['Caveat', 'cursive'],
+                        dancing: ['Dancing Script', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1e1b4b">
+    <link rel="apple-touch-icon" href="pictures/zanzibarSafarilogo.png">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zanzibarsafari.com/">
+    <meta property="og:title" content="Zanzibar Safari | Paradise Found">
+    <meta property="og:description" content="Discover pristine white beaches, rich history, and vibrant culture with the island's most trusted luxury guides.">
+    <meta property="og:image" content="https://zanzibarsafari.com/pictures/ZANZIBAR%20PICS/safari%20blue/safariblue.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://zanzibarsafari.com/">
+    <meta name="twitter:title" content="Zanzibar Safari | Paradise Found">
+    <meta name="twitter:description" content="Discover pristine white beaches, rich history, and vibrant culture with the island's most trusted luxury guides.">
+    <meta name="twitter:image" content="https://zanzibarsafari.com/pictures/ZANZIBAR%20PICS/safari%20blue/safariblue.jpg">
+</head>
+<body class="bg-brand-sand text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-6 px-6 lg:px-12 bg-transparent text-white flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-4 group">
+            <div class="bg-brand-accent rounded-xl h-14 px-1 shadow-lg transition-transform hover:scale-105 flex items-center justify-center">
+                <img src="pictures/zanzibarSafarilogo.png" alt="Zanzibar Safari" class="h-full w-auto object-contain">
+            </div>
+            <span class="text-3xl font-dancing font-bold text-brand-accent transition-colors duration-500 italic hidden lg:block tracking-wider drop-shadow-md">Zanzibar Safari</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-8 items-center font-medium text-sm tracking-widest uppercase">
+            <li><a href="#about" class="hover:text-brand-accent transition">About</a></li>
+            <li><a href="#tours" class="hover:text-brand-accent transition">Tours</a></li>
+            <li><a href="#why-us" class="hover:text-brand-accent transition">Why Us</a></li>
+            <li><a href="#booking" class="bg-brand-accent text-brand-dark px-8 py-3 rounded-full transition-all duration-500 shadow-md hover:shadow-[0_0_25px_rgba(212,175,55,0.4)] border-[1.5px] border-transparent hover:border-brand-dark font-bold flex items-center justify-center text-[10px]">Book Now</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button id="hamburger-btn" class="md:hidden text-2xl focus:outline-none hover:text-brand-accent transition">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-brand-dark/98 backdrop-blur-xl border-b border-white/10 text-white shadow-2xl md:hidden overflow-hidden origin-top">
+            <ul class="flex flex-col py-4">
+                <li><a href="#about" class="block px-8 py-4 hover:bg-white/5 border-b border-white/5 transition tracking-widest uppercase text-xs">About Us</a></li>
+                <li><a href="#tours" class="block px-8 py-4 hover:bg-white/5 border-b border-white/5 transition tracking-widest uppercase text-xs">Tours</a></li>
+                <li><a href="#why-us" class="block px-8 py-4 hover:bg-white/5 border-b border-white/5 transition tracking-widest uppercase text-xs">Why Choose Us</a></li>
+                <li class="px-8 py-6">
+                    <a href="#booking" class="bg-brand-accent text-brand-dark px-8 py-4 rounded-full transition-all duration-500 shadow-md font-bold flex items-center justify-center uppercase tracking-widest text-[10px] w-full">Book Now</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Immersive Full-Screen Hero & About Section -->
+    <header id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div id="about" class="absolute top-0"></div>
+        
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/70 via-brand-dark/50 to-brand-dark/80 z-10"></div>
+            <img src="pictures/hero_new.jpg" alt="Zanzibar Paradise" class="w-full h-full object-cover scale-105 animate-slow-zoom">
+        </div>
+
+        <!-- Content Overlay -->
+        <div class="container mx-auto px-4 md:px-8 relative z-20 text-center text-white max-w-4xl">
+            <div class="animate-fade-in-up">
+                <div class="mb-4">
+                    <span class="text-brand-accent font-bold uppercase tracking-[0.3em] text-[10px] md:text-xs drop-shadow-lg">WELCOME TO ZANZIBAR SAFARI</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-serif font-bold mb-6 leading-[1.1] tracking-tight hero-heading-shadow">
+                    Paradise Found: <br>
+                    <span class="text-white">The Ultimate Experience</span>
+                </h1>
+                
+                <p class="text-base md:text-lg font-sans leading-relaxed font-light mb-10 opacity-90 text-shadow max-w-xl mx-auto uppercase tracking-[0.25em]">
+                    We are local experts <br> dedicated to revealing the <br> authentic soul of our home.
+                </p>
+                
+                <!-- CTA Button -->
+                <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+                    <a href="#tours" class="btn-premium bg-brand-accent text-brand-dark px-10 py-4 rounded-full font-bold transition-all shadow-xl hover:shadow-[0_20px_40px_rgba(212,175,55,0.3)] flex justify-center items-center text-[11px] tracking-[0.2em] uppercase">
+                        Explore Packages
+                    </a>
+                    <a href="#about" class="btn-premium bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-4 rounded-full font-bold transition-all hover:bg-white hover:text-brand-dark hover:shadow-xl flex justify-center items-center text-[11px] tracking-[0.2em] uppercase">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <a href="#tours" class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center group transition-all duration-500 hover:bottom-8">
+            <span class="text-white/50 text-[9px] uppercase tracking-[0.4em] mb-3 font-bold group-hover:text-brand-accent transition-colors">Scroll</span>
+            <div class="w-[22px] h-[36px] border-[1.5px] border-white/20 rounded-full relative group-hover:border-brand-accent/40 transition-colors">
+                <div class="w-[3px] h-[6px] bg-brand-accent absolute top-2 left-1/2 -translate-x-1/2 rounded-full animate-mouse-scroll"></div>
+            </div>
+        </a>
+
+    </header>
+
+    <section id="tours" class="py-16 md:py-20 bg-brand-sand animated-section scroll-animate-up relative">
+        <!-- Minimal subtle texture -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-texture"></div>
+        
+        <div class="container mx-auto px-4 md:px-8 max-w-[1400px] relative z-10">
+            <div class="text-center mb-12 md:mb-16">
+                <span class="text-brand-accent font-bold uppercase tracking-[0.3em] text-xs mb-3 block">The Collection</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-brand-dark tracking-tight">Curated Island Adventures</h2>
+                <div class="w-12 h-[1px] bg-brand-accent/40 mx-auto mt-6"></div>
+            </div>
+
+            <!-- Modern Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mt-12">
+                <!-- Tours will be loaded dynamically from the database here -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-3 py-20 text-center" id="tours-loader">
+                    <div class="inline-block w-12 h-12 border-4 border-brand-accent/20 border-t-brand-accent rounded-full animate-spin"></div>
+                    <p class="mt-4 text-gray-500 font-light tracking-widest uppercase text-xs">Curating Your Experience...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Booking Section - Compact Focused Layout -->
+    <section id="booking" class="py-12 md:py-16 bg-brand-sand/30 overflow-hidden animated-section scroll-animate-up">
+        <div class="container mx-auto px-4 md:px-6 max-w-5xl">
+            <div class="flex flex-col lg:flex-row bg-white rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.03)] overflow-hidden border border-gray-100 min-h-[480px]">
+                
+                <!-- Left Panel: Immersive Visual -->
+                <div class="lg:w-[40%] relative min-h-[300px] lg:min-h-0 flex flex-col justify-end p-10 md:p-16 text-white overflow-hidden group">
+                    <img src="pictures/ZANZIBAR PICS/safari blue/safariblue.jpg" alt="Zanzibar" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105">
+                    <!-- Low-Revealed Watermark Logo -->
+                    <img src="pictures/zanzibarSafarilogo.png" alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[180%] h-auto opacity-[0.06] grayscale brightness-200 pointer-events-none rotate-12 transition-transform duration-[10s] group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/95 via-brand-dark/40 to-transparent"></div>
+                    
+                    <div class="relative z-10 transition-all duration-700">
+                        <span class="text-brand-accent font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Reservation</span>
+                        <h2 class="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight">Your Journey <br>Starts Here</h2>
+                        <div class="w-12 h-[1px] bg-brand-accent/60 mb-8"></div>
+                        <ul class="space-y-4 text-sm font-light text-gray-200">
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-brand-accent text-xs"></i> 24-Hour Confirmation</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-brand-accent text-xs"></i> Expert Local Guides</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-check text-brand-accent text-xs"></i> Secure Payment Options</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lg:w-[60%] p-6 md:p-10 lg:p-12 relative flex flex-col justify-center">
+                    <div class="max-w-md mx-auto lg:mx-0">
+                        <div class="mb-6">
+                            <h3 class="text-2xl font-serif font-bold text-gray-800 mb-1">Request a Booking</h3>
+                            <p class="text-sm text-gray-500 font-light leading-relaxed">Fill out the brief details below to start your escape.</p>
+                        </div>
+
+                        <form id="booking-form" class="space-y-5">
+                            
+                            <!-- Section: Trip Details -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div class="relative group">
+                                    <label class="block text-[11px] uppercase tracking-widest text-gray-400 font-bold mb-1">Select Adventure</label>
+                                    <select id="tour-select" name="tour" required class="w-full bg-transparent border-b border-gray-100 py-2 text-gray-800 text-sm font-medium focus:outline-none focus:border-brand-accent transition-all duration-300 appearance-none cursor-pointer">
+                                        <option value="">Choose your tour</option>
+                                        <option value="Prison Island">Prison Island</option>
+                                        <option value="Jozani Forest">Jozani Forest</option>
+                                        <option value="Stone Town">Stone Town</option>
+                                        <option value="Kuza Cave">Kuza Cave</option>
+                                        <option value="Maalum Cave">Maalum Cave</option>
+                                        <option value="Dolphin tour-Mnemba Atoll">Dolphin Tour</option>
+                                        <option value="Sunset Cruise">Sunset Cruise</option>
+                                        <option value="Mikumi National Park">Mikumi Safari</option>
+                                        <option value="Nakupenda sandbank">Nakupenda Sandbank</option>
+                                        <option value="Safari blue">Safari Blue</option>
+                                        <option value="Spice Tour">Spice Tour</option>
+                                    </select>
+                                    <i class="fas fa-chevron-down absolute bottom-3 right-0 text-[10px] text-gray-300 pointer-events-none"></i>
+                                </div>
+
+                                <div class="relative group">
+                                    <label class="block text-[11px] uppercase tracking-widest text-gray-400 font-bold mb-1">Preferred Date</label>
+                                    <input type="date" id="booking-date" name="date" required class="w-full bg-transparent border-b border-gray-100 py-2 text-gray-800 text-sm font-medium focus:outline-none focus:border-brand-accent transition-all duration-300 cursor-pointer">
+                                </div>
+                            </div>
+
+                            <!-- Section: Personal Details -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div class="relative group">
+                                    <label class="block text-[11px] uppercase tracking-widest text-gray-400 font-bold mb-1">Full Name</label>
+                                    <input type="text" id="full-name" name="name" required placeholder="John Doe" class="w-full bg-transparent border-b border-gray-100 py-2 text-gray-800 text-sm focus:outline-none focus:border-brand-accent placeholder:text-gray-200 transition-all duration-300">
+                                </div>
+                                <div class="relative group">
+                                    <label class="block text-[11px] uppercase tracking-widest text-gray-400 font-bold mb-1">Email Address</label>
+                                    <input type="email" id="email" name="email" required placeholder="john@example.com" class="w-full bg-transparent border-b border-gray-100 py-2 text-gray-800 text-sm focus:outline-none focus:border-brand-accent placeholder:text-gray-200 transition-all duration-300">
+                                </div>
+                            </div>
+
+                            <!-- Row 3 -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div class="relative group">
+                                    <label class="block text-[11px] uppercase tracking-widest text-gray-400 font-bold mb-1">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="+255 7..." class="w-full bg-transparent border-b border-gray-100 py-2 text-gray-800 text-sm focus:outline-none focus:border-brand-accent placeholder:text-gray-200 transition-all duration-300">
+                                </div>
+                                <div class="relative group">
+                                    <label class="block text-[11px] uppercase tracking-widest text-gray-400 font-bold mb-1">Guest Count</label>
+                                    <div class="flex items-center border-b border-gray-100">
+                                        <input type="number" id="guests" name="guests" min="1" value="1" required class="w-full bg-transparent py-2 text-gray-800 font-medium text-sm focus:outline-none focus:border-brand-accent transition-all duration-300">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Special Requests -->
+                            <div class="relative group">
+                                <label class="block text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-1 transition-colors group-focus-within:text-brand-accent">Tell us more</label>
+                                <textarea id="requests" name="requests" rows="2" placeholder="Dietary needs, special occasions..." class="w-full bg-transparent border-b border-gray-200 py-2.5 text-gray-800 focus:outline-none focus:border-brand-accent placeholder:text-gray-200 transition-all duration-300 resize-none"></textarea>
+                            </div>
+
+                            <!-- Submit Area -->
+                            <div class="pt-2 flex flex-col sm:flex-row items-center gap-4">
+                                <button type="submit" class="w-full sm:w-auto bg-brand-dark hover:bg-brand-DEFAULT text-white px-7 py-3 rounded-full font-bold shadow-md transition-all duration-500 transform hover:-translate-y-1 text-xs tracking-widest uppercase border-[1.5px] border-transparent hover:border-brand-dark hover:ring-8 hover:ring-brand-dark/5">
+                                    Confirm My Selection
+                                </button>
+                                <p class="text-[10px] text-gray-400 uppercase tracking-widest leading-none">By clicking, you agree to our protocols.</p>
+                            </div>
+
+                        </form>
+
+                        <!-- Success Overlay (Initially Hidden) -->
+                        <div id="success-message" class="hidden absolute inset-0 bg-white/95 backdrop-blur-md z-20 flex flex-col items-center justify-center text-center p-12 animate-fade-in">
+                            <div class="w-20 h-20 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center text-3xl mb-8">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <h3 class="text-3xl font-serif font-bold text-gray-800 mb-4">Request Received</h3>
+                            <p class="text-gray-500 font-light mb-10 max-w-sm">We've saved your request. One of our local experts will reach out on WhatsApp shortly.</p>
+                            <button type="button" id="edit-booking-btn" class="text-brand-dark font-bold text-xs uppercase tracking-[0.3em] bg-brand-accent/20 px-6 py-3 rounded-full hover:bg-brand-accent hover:text-white transition duration-300">Add Another Booking</button>
+                        </div>
+                        
+                        <!-- Error Message (Hidden) -->
+                        <div id="error-message" class="mt-8 text-xs text-red-500 hidden items-center gap-2">
+                            <i class="fas fa-exclamation-circle text-xs"></i>
+                            <span id="error-text">Please complete all required fields.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Us Section - Dark Theme -->
+    <section id="why-us" class="py-16 md:py-20 bg-brand-dark text-white relative animated-section scroll-animate-up border-b border-brand-accent/20">
+        <div class="absolute inset-0 bg-brand-dark/95 z-0 background-pattern opacity-10 pointer-events-none"></div>
+        <div class="container mx-auto px-4 md:px-8 max-w-[1400px] relative z-10">
+            <div class="text-center mb-12 md:mb-16">
+                <h4 class="text-brand-accent font-bold uppercase tracking-[0.2em] mb-3 text-xs">The Difference</h4>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold tracking-tight">Why Choose Us</h2>
+                <div class="w-12 h-[2px] bg-brand-accent mx-auto mt-6"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10 rounded-[2.5rem] overflow-hidden backdrop-blur-md bg-white/5 shadow-2xl">
+                <!-- Col 1 -->
+                <div class="p-10 lg:p-16 border-b md:border-b-0 md:border-r border-white/10 hover:bg-white/5 transition duration-500 group">
+                    <div class="text-brand-accent text-4xl mb-8 group-hover:-translate-y-2 transition duration-500"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3 class="text-2xl font-serif mb-4 font-bold tracking-wide">Local Expertise</h3>
+                    <p class="text-gray-400 font-light leading-relaxed">Our guides were born right here. They know the hidden gems, the secret beaches, and the intriguing stories behind them that you won't find anywhere online.</p>
+                </div>
+                <!-- Col 2 -->
+                <div class="p-10 lg:p-16 border-b md:border-b-0 md:border-r border-white/10 hover:bg-white/5 transition duration-500 group">
+                    <div class="text-brand-accent text-4xl mb-8 group-hover:-translate-y-2 transition duration-500"><i class="fas fa-umbrella-beach"></i></div>
+                    <h3 class="text-2xl font-serif mb-4 font-bold tracking-wide">Tailored Experiences</h3>
+                    <p class="text-gray-400 font-light leading-relaxed">We definitely don't do "one size fits all." We meticulously customize itineraries to match your pace, interests, and budget for an absolutely perfect holiday.</p>
+                </div>
+                <!-- Col 3 -->
+                <div class="p-10 lg:p-16 hover:bg-white/5 transition duration-500 group">
+                    <div class="text-brand-accent text-4xl mb-8 group-hover:-translate-y-2 transition duration-500"><i class="fas fa-headset"></i></div>
+                    <h3 class="text-2xl font-serif mb-4 font-bold tracking-wide">24/7 Support</h3>
+                    <p class="text-gray-400 font-light leading-relaxed">From the exact moment you land until you happily depart, our dedicated team is always just a quick phone call or WhatsApp message away to gracefully assist you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 md:py-20 bg-white animated-section scroll-animate-up">
+        <div class="container mx-auto px-4 md:px-8 max-w-[1400px]">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-16 gap-8">
+                <div class="max-w-2xl">
+                    <div class="flex flex-wrap items-center gap-3 mb-4">
+                        <span class="text-brand-accent font-bold uppercase tracking-[0.3em] text-[10px]">Testimonials</span>
+                        <div class="flex items-center gap-2 px-3 py-1 bg-gray-50 rounded-full border border-gray-100 shadow-sm">
+                            <div class="flex gap-0.5 text-[8px] text-brand-accent">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-[9px] font-bold text-gray-500 uppercase tracking-widest">4.9/5 Verified Reviews</span>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold text-brand-dark tracking-tight leading-tight">What Our Adventurers Say</h2>
+                </div>
+                <div class="flex gap-3">
+                    <button id="testimonial-prev" class="w-12 h-12 rounded-full border border-brand-dark/10 flex items-center justify-center text-brand-dark hover:bg-brand-dark hover:text-white transition duration-500 shadow-sm">
+                        <i class="fas fa-chevron-left text-lg"></i>
+                    </button>
+                    <button id="testimonial-next" class="w-12 h-12 rounded-full border border-brand-dark/10 flex items-center justify-center text-brand-dark hover:bg-brand-dark hover:text-white transition duration-500 shadow-sm">
+                        <i class="fas fa-chevron-right text-lg"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="testimonial-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Testimonials will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-20 animated-section px-4 parallax-section">
+        <div class="parallax-bg" style="background-image: url('pictures/hero_new.jpg'); opacity: 0.12;"></div>
+        <div class="container mx-auto max-w-[1400px]">
+            <div class="cta-premium py-16 md:py-24 px-8 md:px-24 text-center text-white relative">
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mb-8 tracking-tight">Your Paradise Awaits.</h2>
+                    <p class="text-base md:text-xl mb-10 max-w-2xl mx-auto font-light text-gray-300 leading-relaxed">
+                        Ready to plan your unforgettable island getaway? Let us curate the perfect Zanzibar experience for you.
+                    </p>
+                    <a href="#booking" class="inline-flex items-center gap-3 bg-brand-accent hover:bg-white hover:text-brand-dark text-brand-dark px-10 py-4 rounded-full font-bold text-lg transition-all duration-500 shadow-2xl group">
+                        Start Your Journey
+                        <i class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section — Pure Logos with Dark Sharp Frame -->
+    <section id="partners" class="py-12 md:py-20 bg-slate-50 relative overflow-hidden animated-section scroll-animate-up -mt-12 z-20 parallax-section">
+        <div class="parallax-bg" style="background-image: url('pictures/hero_new.jpg'); opacity: 0.04;"></div>
+        <div class="container mx-auto px-4 md:px-8 max-w-[1400px]">
+            <div class="bg-white rounded-[1.5rem] p-8 md:p-10 border-[1.5px] border-brand-dark shadow-[0_10px_30px_rgba(0,0,0,0.04)] ring-8 ring-brand-dark/5">
+                <div class="partners-ribbon">
+                    <img src="pictures/ZANZIBAR PICS/webpartnerLogos/logo-240x35@3x (2).png" alt="Trustpilot" class="partner-logo">
+                    <img src="pictures/ZANZIBAR PICS/webpartnerLogos/download-removebg-preview.png" alt="Partner" class="partner-logo">
+                    <img src="pictures/ZANZIBAR PICS/webpartnerLogos/travellifelogo.png" alt="Travel Life" class="partner-logo">
+                    <img src="pictures/ZANZIBAR PICS/webpartnerLogos/wordmark.png" alt="Tripadvisor" class="partner-logo">
+                    <img src="pictures/ZANZIBAR PICS/webpartnerLogos/bokmondi56-removebg-preview.png" alt="Bookmundi" class="partner-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer id="contact" class="pt-20 pb-10 bg-brand-dark text-white relative overflow-hidden">
+        <!-- Subtle background texture -->
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-texture"></div>
+        <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-right from-transparent via-brand-accent/30 to-transparent"></div>
+        
+        <div class="container mx-auto px-4 md:px-8 max-w-[1400px] relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
+                
+                <div class="lg:col-span-5">
+                    <a href="#home" class="block mb-8 group">
+                        <span class="text-4xl font-dancing font-bold text-brand-accent group-hover:text-white transition-colors duration-500 italic block">Zanzibar Safari</span>
+                    </a>
+                    <p class="text-gray-400 text-base leading-relaxed mb-10 font-light max-w-md">
+                        Specializing in bespoke tours that showcase the authentic soul of Zanzibar. From historic Stone Town to hidden coastal paradises, we define luxury through depth and local insight.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://www.tiktok.com/@zanzibar__safari" class="social-pill text-lg" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/zanzibar__safari" class="social-pill text-lg" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/159VFNETZqK/" class="social-pill text-lg" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://youtube.com/@zanzibar__safari" class="social-pill text-lg" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Navigation Columns -->
+                <div class="lg:col-span-3 flex flex-col lg:items-center">
+                    <div class="text-left">
+                        <h4 class="text-brand-accent font-bold uppercase tracking-[0.3em] text-[11px] mb-8">Navigation</h4>
+                        <ul class="space-y-5">
+                            <li><a href="#home" class="footer-link text-sm tracking-wide">Home</a></li>
+                            <li><a href="#about" class="footer-link text-sm tracking-wide">Our Story</a></li>
+                            <li><a href="#tours" class="footer-link text-sm tracking-wide">The Collection</a></li>
+                            <li><a href="#why-us" class="footer-link text-sm tracking-wide">Why Choose Us</a></li>
+                            <li><a href="#testimonials" class="footer-link text-sm tracking-wide">Guest Reviews</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="lg:col-span-4 lg:ml-auto lg:pl-10">
+                    <h4 class="text-brand-accent font-bold uppercase tracking-[0.3em] text-[11px] mb-8">Connect</h4>
+                    <div class="space-y-8">
+                        <a href="mailto:zanzisafari@gmail.com" class="group flex items-start gap-5">
+                            <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-dark transition-all duration-500">
+                                <i class="far fa-envelope text-base"></i>
+                            </div>
+                            <div>
+                                <p class="text-[11px] uppercase tracking-widest text-gray-500 font-bold mb-1">Email Us</p>
+                                <p class="text-base text-white group-hover:text-brand-accent transition-colors">zanzisafari@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="tel:+255786639283" class="group flex items-start gap-5">
+                            <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-dark transition-all duration-500">
+                                <i class="fas fa-phone-alt text-base"></i>
+                            </div>
+                            <div>
+                                <p class="text-[11px] uppercase tracking-widest text-gray-500 font-bold mb-1">Call Anytime</p>
+                                <p class="text-base text-white group-hover:text-brand-accent transition-colors">+255 786 639 283</p>
+                            </div>
+                        </a>
+                        <a href="https://maps.google.com/?q=-6.1659,39.2026" target="_blank" class="group flex items-start gap-5">
+                            <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-dark transition-all duration-500">
+                                <i class="fas fa-map-marker-alt text-base"></i>
+                            </div>
+                            <div>
+                                <p class="text-[11px] uppercase tracking-widest text-gray-500 font-bold mb-1">Find Us</p>
+                                <p class="text-base text-white group-hover:text-brand-accent transition-colors tracking-tight">Zanzibar, Tanzania</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Area -->
+            <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-gray-500 text-[10px] uppercase tracking-[0.2em]">
+                    &copy; 2026 Zanzibar Safari. All rights reserved.
+                </p>
+                <div class="flex items-center gap-8">
+                    <a href="#" class="text-gray-500 hover:text-white text-[10px] uppercase tracking-widest transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-[10px] uppercase tracking-widest transition-colors">Terms of Service</a>
+                </div>
+                <div class="text-gray-500 text-[10px] uppercase tracking-[0.2em] font-medium">
+                    Designed by <a href="tel:+255682314147" class="text-brand-accent/60 hover:text-brand-accent transition-colors">Catalyst</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Branded WhatsApp Pill (Icon only initially) -->
+    <a href="https://wa.me/255786639283?text=Hi!%20I'm%20interested%20in%20your%20tours.%20Could%20you%20help%20me%20plan%20my%20Zanzibar%20adventure%3F" class="whatsapp-brand-pill whatsapp-hidden group" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-pill-text">Talk with us</span>
+    </a>
+
+    <!-- JavaScript for Interactivity -->
+    <script src="script.js"></script>
+
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => {
+                        console.log('Service Worker registered');
+                        
+                        // Listen for updates
+                        reg.onupdatefound = () => {
+                            const installingWorker = reg.installing;
+                            installingWorker.onstatechange = () => {
+                                if (installingWorker.state === 'installed') {
+                                    if (navigator.serviceWorker.controller) {
+                                        // New content is available, it will be activated by skipWaiting/clientsClaim
+                                        console.log('New content available, refreshing...');
+                                    }
+                                }
+                            };
+                        };
+                    })
+                    .catch(err => console.log('Service Worker registration failed', err));
+            });
+
+            // Automatically refresh when the new service worker takes over
+            let refreshing = false;
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                if (!refreshing) {
+                    window.location.reload();
+                    refreshing = true;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

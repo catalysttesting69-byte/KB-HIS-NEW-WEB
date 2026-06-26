@@ -1,0 +1,25 @@
+{
+  "name": "Zanzibar Safari",
+  "short_name": "Zanzibar",
+  "description": "Premium Tours & Adventures in Zanzibar",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#d4af37",
+  "orientation": "portrait",
+  "categories": ["travel", "lifestyle"],
+  "icons": [
+    {
+      "src": "pictures/zanzibarSafarilogo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "pictures/zanzibarSafarilogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
